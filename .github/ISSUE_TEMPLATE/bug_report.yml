@@ -63,7 +63,7 @@ body:
     attributes:
       label: GPU と WebGPU の状態
       description: GPU 名と、chrome://gpu の WebGPU が Hardware accelerated かどうかを入力してください。レポート全体は貼り付けないでください。
-      placeholder: 例：AMD Radeon 760M、WebGPU: Hardware accelerated
+      placeholder: "例：AMD Radeon 760M、WebGPU: Hardware accelerated"
     validations:
       required: true
 
