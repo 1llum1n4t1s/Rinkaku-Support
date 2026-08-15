@@ -1,0 +1,175 @@
+name: 不具合報告
+description: Rinkaku の動作に問題がある場合はこちらから報告してください。
+title: "[不具合] "
+labels:
+  - 不具合
+  - 要確認
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ご報告ありがとうございます。Issue は誰でも閲覧できます。購入時のメールアドレス、6 桁の確認コード、購入 ID、署名済み credential、非公開の動画 URL などの機密情報は記載しないでください。
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: 投稿前の確認
+      options:
+        - label: 既存の Issue に同じ内容がないことを確認しました。
+          required: true
+        - label: Rinkaku と Chrome を最新版へ更新しても問題が再現することを確認しました。
+          required: true
+        - label: 投稿内容に個人情報、認証情報、非公開の動画内容が含まれていないことを確認しました。
+          required: true
+
+  - type: input
+    id: rinkaku-version
+    attributes:
+      label: Rinkaku のバージョン
+      description: chrome://extensions の Rinkaku 詳細画面に表示されるバージョンを入力してください。
+      placeholder: 例：1.0.0
+    validations:
+      required: true
+
+  - type: dropdown
+    id: browser
+    attributes:
+      label: ブラウザー
+      options:
+        - Google Chrome
+        - Microsoft Edge
+        - その他の Chromium 系ブラウザー
+    validations:
+      required: true
+
+  - type: input
+    id: browser-version
+    attributes:
+      label: ブラウザーのバージョン
+      placeholder: 例：Chrome 140
+    validations:
+      required: true
+
+  - type: input
+    id: os-version
+    attributes:
+      label: OS
+      placeholder: 例：Windows 11 24H2、macOS 15.6、Ubuntu 24.04
+    validations:
+      required: true
+
+  - type: input
+    id: gpu
+    attributes:
+      label: GPU と WebGPU の状態
+      description: GPU 名と、chrome://gpu の WebGPU が Hardware accelerated かどうかを入力してください。レポート全体は貼り付けないでください。
+      placeholder: 例：AMD Radeon 760M、WebGPU: Hardware accelerated
+    validations:
+      required: true
+
+  - type: dropdown
+    id: site
+    attributes:
+      label: 問題が起きたサイト
+      options:
+        - YouTube
+        - X
+        - その他の動画サイト
+        - 複数のサイト
+        - サイトを開く前から発生
+    validations:
+      required: true
+
+  - type: input
+    id: site-detail
+    attributes:
+      label: サイトの補足
+      description: その他のサイトの場合はドメイン名だけを入力してください。非公開ページや動画の完全な URL は記載しないでください。
+      placeholder: 例：example.com
+
+  - type: dropdown
+    id: mode
+    attributes:
+      label: 映像モード
+      options:
+        - 実写
+        - アニメ
+        - 両方
+        - 不明・映像処理とは無関係
+    validations:
+      required: true
+
+  - type: dropdown
+    id: strength
+    attributes:
+      label: 強度
+      options:
+        - 低
+        - 中
+        - 高
+        - すべて
+        - 不明・強度とは無関係
+    validations:
+      required: true
+
+  - type: dropdown
+    id: problem-type
+    attributes:
+      label: 問題の種類
+      options:
+        - 映像処理が始まらない・canvas が表示されない
+        - 画質効果が弱い・画質が悪化する
+        - ちらつき・ハロー・色・ノイズなどの映像異常
+        - 再生が重い・フレームが落ちる
+        - ポップアップ・設定・ショートカット
+        - 試用期間・購入・ライセンス認証
+        - 他の拡張機能との互換性
+        - その他
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: 発生した問題
+      description: 何が起きたかを具体的に記載してください。エラーメッセージが表示された場合は、その内容も記載してください。
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: 再現手順
+      description: 問題が起きるまでの操作を最初から順番に記載してください。
+      placeholder: |
+        1. 動画ページを開く
+        2. Rinkaku を実写・高に設定する
+        3. …すると問題が発生する
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: 期待していた動作
+      description: 本来どのような動作になると考えていたかを記載してください。
+    validations:
+      required: true
+
+  - type: textarea
+    id: frequency
+    attributes:
+      label: 発生頻度
+      description: 毎回、時々、一度だけなど、分かる範囲で記載してください。
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: 画像や補足資料
+      description: 必要に応じて、個人情報、認証情報、非公開の動画内容を取り除いた画像を添付してください。
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: その他の情報
+      description: 併用している映像系の拡張機能や、問題に関係しそうな設定があれば記載してください。

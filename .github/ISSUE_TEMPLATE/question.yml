@@ -1,0 +1,59 @@
+name: 使い方についての質問
+description: Rinkaku の設定や操作方法について質問してください。
+title: "[質問] "
+labels:
+  - 質問
+  - 要確認
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ご質問ありがとうございます。Issue は誰でも閲覧できます。購入時のメールアドレス、6 桁の確認コード、購入 ID、署名済み credential、非公開の動画 URL などの機密情報は記載しないでください。
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: 投稿前の確認
+      options:
+        - label: 既存の Issue に同じ質問がないことを確認しました。
+          required: true
+        - label: 投稿内容に個人情報、認証情報、非公開の動画内容が含まれていないことを確認しました。
+          required: true
+
+  - type: input
+    id: rinkaku-version
+    attributes:
+      label: Rinkaku のバージョン
+      description: chrome://extensions の Rinkaku 詳細画面に表示されるバージョンを入力してください。
+      placeholder: 例：1.0.0
+    validations:
+      required: true
+
+  - type: dropdown
+    id: topic
+    attributes:
+      label: 質問の種類
+      options:
+        - 導入・対応環境
+        - 実写・アニメ・強度の選び方
+        - サイトごとの設定
+        - GPU・WebGPU・処理速度
+        - 他の拡張機能との併用
+        - 試用期間・購入・ライセンス認証
+        - その他
+    validations:
+      required: true
+
+  - type: textarea
+    id: question
+    attributes:
+      label: 質問内容
+      description: 実現したいこと、試した操作、分からなかった点を記載してください。
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: その他の情報
+      description: 必要に応じて、個人情報、認証情報、非公開の動画内容を取り除いた画像や補足情報を添付してください。

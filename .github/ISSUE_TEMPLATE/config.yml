@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 非公開でセキュリティ上の問題を報告する
+    url: https://github.com/1llum1n4t1s/Rinkaku-Support/security/advisories/new
+    about: 脆弱性やセキュリティ上の問題は、公開 Issue ではなくこちらへ報告してください。
