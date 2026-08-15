@@ -6,6 +6,7 @@
 - [機能を提案する](https://github.com/1llum1n4t1s/Rinkaku-Support/issues/new?template=feature_request.yml)
 - [使い方について質問する](https://github.com/1llum1n4t1s/Rinkaku-Support/issues/new?template=question.yml)
 - [既存の Issue を確認する](https://github.com/1llum1n4t1s/Rinkaku-Support/issues)
+- [プライバシーポリシー](PRIVACY.md)
 
 Rinkaku のソースコードは非公開です。このリポジトリでは、不具合報告、機能要望、使い方に関する質問を受け付けています。コード変更の Pull Request は受け付けていません。
 
